@@ -147,11 +147,23 @@ export default function Home() {
   return (
     <>
       <header className="site-header">
-        <div className="container header-inner">
-          <a href="#hero" className="brand" onClick={handleAnchor}>
-            <span className="brand-badge" aria-hidden="true">BA</span>
-            <span className="brand-name">Dr. Babagana Adam</span>
-          </a>
+  <div className="container header-inner">
+    <a href="#hero" className="brand" onClick={handleAnchor}>
+      <img
+        src="/header.png"
+        alt="Site Logo"
+        className="brand-logo"
+        style={{
+          width: '38px',
+          height: '38px',
+          borderRadius: '50%',
+          objectFit: 'cover',
+          marginRight: '10px',
+          verticalAlign: 'middle'
+        }}
+      />
+      <span className="brand-name">Dr. Babagana Adam</span>
+    </a>
 
           <button
             className="nav-toggle"
@@ -178,9 +190,12 @@ export default function Home() {
           <div className="container hero-inner">
             <div className="hero-text">
               <h1 className="hero-title reveal reveal-left" style={{ '--delay': '0ms' }}>
+                <div className='namecover'>
                 <span className="name-part">Dr. Babagana</span>
                 <span className="name-part">Adam</span>
                 <span className="name-part">Mohammed</span>
+                </div>
+                
               </h1>
               <div className="hero-taglines" aria-live="polite">
                 <p key={taglineIndex} className="hero-sub fade-line" style={{ '--delay': '140ms' }}>
@@ -194,9 +209,7 @@ export default function Home() {
                 <a className="btn ghost" href="#contact" onClick={handleAnchor}>Contact</a>
               </div>
             </div>
-            <div className="hero-visual" aria-hidden="true">
-              <img src={heroImage} alt="" loading="eager" decoding="async" />
-            </div>
+            
           </div>
         </section>
 
